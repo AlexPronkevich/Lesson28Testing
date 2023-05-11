@@ -47,5 +47,6 @@ class Student:
             self.__alive = alive
 
     def __str__(self):
-        return f"{self.name}: age = {self.__age}. " \
+        return f"{self.name}: age = {self.__age}. " \ 
+               f"mark ={self.__mark}"\
                f"Is alive? - {self.is_alive}"
