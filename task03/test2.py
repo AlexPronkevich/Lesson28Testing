@@ -1,10 +1,4 @@
 
-
-class Super:
-    def walk(self):
-        print("I can walk")
-
-
 class Super:
     def walk(self):
         print("I can walk")
