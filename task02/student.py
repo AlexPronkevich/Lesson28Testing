@@ -1,14 +1,15 @@
+from human import Human
+
+
 # Student - Entity class
 
 class Student(Human):
     def __init__(self, name='no name', age=0, alive=True, mark=4):
-        self.__name = name
-        self.__age = age
-        self.__alive = alive
+        super().__init__(name, age, alive)
         self.__mark = mark
 
     def can_study(self):
-        print(self.__name + " can study.")
+        print(self.name + " can study.")
 
     @property
     def mark(self):
@@ -19,3 +20,6 @@ class Student(Human):
         if 0 <= mark <= 10:
             self.__mark = mark
 
+    def __str__(self):
+        return (super().__str__()
+                + f"Mark: {self.__mark}")
